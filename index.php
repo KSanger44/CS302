@@ -52,33 +52,39 @@
 </head>
 
 <body>
-    <h4>Hello <?php echo $_SESSION['fname']; ?>,</h4>
+    <h4><?php echo $_SESSION['fname'] . "'s " . $procname; ?>,</h4>
 
-    <div class="container-fluid">
+    <div class="container">
         <div id="appt">
             <p><?php echo $_SESSION['fname'] . " is scheduled for " .  $procname . " with " . $docname . " at " .  $time . " on " . $date; ?>.</p>
         </div>
         <div id="desc">
         <?php 
             if($checkin == 0){
+                echo"<div class='container'>";
                 echo "<p>Please make sure to do the <a href='checkin.php'>Patient Check-in</a> at least 24 hours before the start of the procedure</p>";
+                echo "</div>";
             }
-            echo $desc; ?>
+            echo"<div class='container'>";
+            echo $desc; 
+            echo "</div>";
+            ?>
 
         </div>
     </div>
-
-    <div class="btn-group">
+    
+    
+    <div class="btn-group d-flex w-100 text-center" role="group">
         <?php if($checkin == 0){
-        echo "<a href='checkin.php' role='button' class='btn btn-danger'>Check-in</a>";
+        echo "<a href='checkin.php' role='button' class='btn btn-lg btn-danger w-100'>Check-in</a>";
         } else {
-            echo "<a href='#' role='button' class='btn btn-success'>Checked In</a>";    
+            echo "<a href='#' role='button' class='btn btn-lg btn-success w-100'>Checked In</a>";    
         }
         ?>
-        <a href="patientStatus.php" role="button" class="btn btn-primary">Patient Status</a>
-        <a href="index.php" role="button" class="btn btn-primary">Procedure Info</a>
-        <a href="contacts.php" role="button" class="btn btn-primary">Contacts</a>
-        <a href="logout.php" role="button" class="btn btn-light">Logout</a>
+        <a href="patientStatus.php" role="button" class="btn btn-lg btn-primary w-100">Patient Status</a>
+        <a href="index.php" role="button" class="btn btn-lg btn-primary w-100">Procedure Info</a>
+        <a href="contacts.php" role="button" class="btn btn-lg btn-primary w-100">Contacts</a>
+        <a href="logout.php" role="button" class="btn btn-lg btn-light w-100">Logout</a>
     </div>
 </body>
 
