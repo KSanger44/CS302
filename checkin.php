@@ -47,6 +47,14 @@
             event.preventDefault();
             errLog.style.display = "initial";   
             errLog.innerHTML = "Please confirm your procedure time";
+          } else if (checkin.feet.value === "") {
+            event.preventDefault();
+            errLog.style.display = "initial";   
+            errLog.innerHTML = "Please enter a valid height";
+          } else if (checkin.inches.value > 12) {
+            event.preventDefault();
+            errLog.style.display = "initial";   
+            errLog.innerHTML = "Please enter a valid height";  
           };
         });
       });
@@ -83,9 +91,17 @@
 
       echo "<div class='container w-60'>";
       echo "<div class='form-group'>
-      <label for='height'>Enter your height in inches:</label>
-      <div class='col-md-2'>
-      <input type='text' class='form-control' id='height' placeholder=$height></div></div></div>";
+      <table>
+      <tr>
+      <td colspan='2'><label for='height'>Enter your height:</label></td></tr>
+      <tr>
+      <td><label for='feet'>Feet </label></td>
+      <td><input type='text' class='form-control' id='feet' placeholder=$feet></td></tr>
+      <tr>
+      <td><label for='inches'>Inches </label></td>
+      <td><input type='text' class='form-control' id='inches' placeholder=$inches></td></tr>
+      </table>
+      </div></div></div>";
 
       echo "<div class='container w-60'>";
       echo "<div class='form-group'>
