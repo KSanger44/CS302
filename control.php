@@ -115,7 +115,15 @@
             $docresult = mysqli_query($conn,$docsql);
             $docrow = mysqli_fetch_array($docresult,MYSQLI_ASSOC);
 
-            $adminsql ="SELECT * FROM procs, patient, doctor";
+            $adminsql ="SELECT patient.fname, patient.lname,
+                        procs.procedure, procs.date, procs.time, procs.status,
+                        doctor.dname
+                        FROM procs
+                        JOIN patient
+                        ON procs.pID = patient.pID
+                        JOIN doctor
+                        ON procs.dID = doctor.dID"
+
             $adminresult = mysqli_query($conn,$adminsql);
             $adminrow = mysqli_fetch_array($adminresult,MYSQLI_ASSOC);
 
@@ -126,11 +134,11 @@
               while($procrow = $procresult->fetch_assoc()){
                 
                 echo "<tr>
-                      <th scope='row'>" . $adminrow['patient.fname'] . " " . $adminrow['patient.lname'] . "</th>
-                      <td><input type='text' class='form-control' name='doctor' placeholder='" . $adminrow['doctor.name'] . "value=''/></td>
-                      <td>" . $adminrow['procs.name'] . "</td>
-                      <td><input type='text' class='form-control' name='date' placeholder='" . $adminrow['procs.date'] . "value=''/></td>
-                      <td><input type='text' class='form-control' name='time' placeholder='" . $adminrow['procs.time'] . "value=''/></td>
+                      <th scope='row'>" . $adminrow['fname'] . " " . $adminrow['lname'] . "</th>
+                      <td><input type='text' class='form-control' name='doctor' placeholder='" . $adminrow['dname'] . "value=''/></td>
+                      <td>" . $adminrow['procedure'] . "</td>
+                      <td><input type='text' class='form-control' name='date' placeholder='" . $adminrow['date'] . "value=''/></td>
+                      <td><input type='text' class='form-control' name='time' placeholder='" . $adminrow['time'] . "value=''/></td>
 
                       <td class='fit'<div class='btn-group-vertical ' role='group'>
                       <button type='button' id='prep' class='btn btn-danger'>Prep</button>

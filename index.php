@@ -6,7 +6,7 @@
     $psql = "SELECT * FROM procs WHERE pID = '$pID'";
     $presult = mysqli_query($conn,$psql);
     $prow = mysqli_fetch_array($presult,MYSQLI_ASSOC);
-    $procname = $prow["name"];
+    $procname = $prow["procedure"];
     $procID = $prow["procID"];
     $dID = $prow["dID"];
     $desc = $prow["desc"];
@@ -31,10 +31,10 @@
     $_SESSION['time'] = $time;
     $_SESSION['date'] = $date;
 
-    $dsql = "SELECT name FROM doctor WHERE dID = '$dID'";
+    $dsql = "SELECT dname FROM doctor WHERE dID = '$dID'";
     $dresult = mysqli_query($conn,$dsql);
     $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
-    $docname = $drow["name"];
+    $docname = $drow["dname"];
 
     $csql = "SELECT checkin FROM procs WHERE procID = '$procID'";
     $cresult = mysqli_query($conn,$csql);
