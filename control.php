@@ -106,10 +106,6 @@
             }   
             
 
-            $docsql= "SELECT * FROM doctor";
-            $docresult = mysqli_query($conn,$docsql);
-            $docrow = mysqli_fetch_array($docresult,MYSQLI_ASSOC);
-
             $adminsql ="SELECT patient.fname, patient.lname,
                         procs.procedure, procs.date, procs.time, procs.status,
                         doctor.dname
@@ -121,6 +117,7 @@
 
             $adminresult = mysqli_query($conn,$adminsql);
             $adminrow = mysqli_fetch_array($adminresult,MYSQLI_ASSOC);
+
 
             //display the sql result set in an html table
             $table = $conn->query($adminsql);
@@ -137,21 +134,21 @@
                       <td>" . $adminrow['time'] . "</td>
 
                       <td class='fit' role='group'>
-                      <input type='radio' class='btn-check' name='status' id='prep'>
+                      <input type='radio' class='btn-check' name='status' id='prep" . $adminrow['pID'] . "'>
                       <label class='btn btn-outline-danger' for='status'>Prep</label>
 
-                      <input type='radio' class='btn-check' name='status' id='surg'>
+                      <input type='radio' class='btn-check' name='status' id='surg" . $adminrow['pID'] . "'>
                       <label class='btn btn-outline-warning' for='status'>Surg</label>
 
-                      <input type='radio' class='btn-check' name='status' id='recov'>
+                      <input type='radio' class='btn-check' name='status' id='recov" . $adminrow['pID'] . "'>
                       <label class='btn btn-outline-primary' for='status'>Recov</label>
 
-                      <input type='radio' class='btn-check' name='status' id='clear'>
+                      <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'>
                       <label class='btn btn-outline-success' for='status'>Clear</label>
                       </div>
                       
                       <td><textarea id='alert' name='alert' rows='4' cols='50'></textarea></td>
-                      <td><input type='submit' id='confirm' name='confirm'>
+                      <td><input type='submit' id='confirm" . $adminrow['pID'] . "' name='confirm'>
                       </tr>";
                                               
               }                
