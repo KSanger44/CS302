@@ -132,11 +132,11 @@
                       <th scope='row'>" . $adminrow['fname'] . " " . $adminrow['lname'] . "</th>
                       <td>" . $adminrow['dname'] . "</td>
                       <td>" . $adminrow['procedure'] . "</td>
-                      <td><input type='text' class='form-control' name='date' placeholder='" . $adminrow['date'] . "value=''/></td>
-                      <td><input type='text' class='form-control' name='time' placeholder='" . $adminrow['time'] . "value=''/></td>
+                      <td>" . $adminrow['date'] . "</td>
+                      <td>" . $adminrow['time'] . "</td>
 
                       <td class='fit' role='group'>
-                      <input type='radio' class='btn-check' name='status' id='prep'>
+                      <input type='radio' class='btn-check' name='status' id='prep' checked>
                       <label class='btn btn-outline-danger' for='status'>Prep</label>
 
                       <input type='radio' class='btn-check' name='status' id='surg'>
