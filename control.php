@@ -103,14 +103,6 @@
             }   
             
 
-            $procsql= "SELECT * FROM procs";
-            $procresult = mysqli_query($conn,$procsql);
-            $procrow = mysqli_fetch_array($procresult,MYSQLI_ASSOC);
-
-            $patsql= "SELECT * FROM patient";
-            $patresult = mysqli_query($conn,$patsql);
-            $patrow = mysqli_fetch_array($patresult,MYSQLI_ASSOC);
-
             $docsql= "SELECT * FROM doctor";
             $docresult = mysqli_query($conn,$docsql);
             $docrow = mysqli_fetch_array($docresult,MYSQLI_ASSOC);
