@@ -137,7 +137,7 @@
                       
                       <td><textarea id='alert' name='alert' rows='4' cols='50'></textarea></td>
                       <td><button type='button'>Confirm</button></td>
-                      </tr>"
+                      </tr>";
                                               
               }
                 
