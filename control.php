@@ -115,18 +115,22 @@
             $docresult = mysqli_query($conn,$docsql);
             $docrow = mysqli_fetch_array($docresult,MYSQLI_ASSOC);
 
+            $adminsql ="SELECT * FROM procs, patient, doctor";
+            $adminresult = mysqli_query($conn,$adminsql);
+            $adminrow = mysqli_fetch_array($adminresult,MYSQLI_ASSOC);
+
             //display the sql result set in an html table
-            $table = $conn->query($procsql);
+            $table = $conn->query($adminsql);
             if ($table->num_rows > 0) {
               //output each result row
               while($procrow = $procresult->fetch_assoc()){
                 
                 echo "<tr>
-                      <th scope='row'>" . $patrow['fname'] . " " . $patrow['lname'] . "</th>
-                      <td><input type='text' class='form-control' name='doctor' placeholder='" . $docrow['name'] . "value=''/></td>
-                      <td>" . $procrow['name'] . "</td>
-                      <td><input type='text' class='form-control' name='date' placeholder='" . $procrow['date'] . "value=''/></td>
-                      <td><input type='text' class='form-control' name='time' placeholder='" . $procrow['time'] . "value=''/></td>
+                      <th scope='row'>" . $adminrow['patient.fname'] . " " . $adminrow['patient.lname'] . "</th>
+                      <td><input type='text' class='form-control' name='doctor' placeholder='" . $adminrow['doctor.name'] . "value=''/></td>
+                      <td>" . $adminrow['procs.name'] . "</td>
+                      <td><input type='text' class='form-control' name='date' placeholder='" . $adminrow['procs.date'] . "value=''/></td>
+                      <td><input type='text' class='form-control' name='time' placeholder='" . $adminrow['procs.time'] . "value=''/></td>
 
                       <td class='fit'<div class='btn-group-vertical ' role='group'>
                       <button type='button' id='prep' class='btn btn-danger'>Prep</button>
