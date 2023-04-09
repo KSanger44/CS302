@@ -106,7 +106,7 @@
             }   
             
 
-            $adminsql ="SELECT patient.fname, patient.lname,
+            $adminsql ="SELECT patient.pID, patient.fname, patient.lname,
                         procs.procedure, procs.date, procs.time, procs.status,
                         doctor.dname
                         FROM procs
@@ -133,7 +133,7 @@
                       <td>" . $adminrow['date'] . "</td>
                       <td>" . $adminrow['time'] . "</td>
 
-                      <td class='fit' role='group'>
+                      <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>
                       <input type='radio' class='btn-check' name='status' id='prep" . $adminrow['pID'] . "'>
                       <label class='btn btn-outline-danger' for='status'>Prep</label>
 
