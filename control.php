@@ -133,7 +133,7 @@
                       <td>" . $adminrow['dname'] . "</td>
                       <td>" . $adminrow['procedure'] . "</td>
                       <td>" . $adminrow['date'] . "</td>
-                      <td> date('g:i a', strtotime( ."$adminrow['time'] . "));</td>
+                      <td>"; echo "date('g:i a', strtotime(" . $adminrow['time'] . "));</td>
 
                       <td class='fit' role='group'>
                       <input type='radio' class='btn-check' name='status' id='prep'>
