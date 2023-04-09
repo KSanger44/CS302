@@ -82,6 +82,7 @@
     <h4>Patients in Surgery</h4>
     <div class='container'>
 
+    <form action="" method="post">
     <table class="table table-striped">
     <thead>
         <tr>
@@ -133,7 +134,7 @@
                       <td>" . $adminrow['dname'] . "</td>
                       <td>" . $adminrow['procedure'] . "</td>
                       <td>" . $adminrow['date'] . "</td>
-                      <td>"; echo "date('g:i a', strtotime(" . $adminrow['time'] . "));</td>
+                      <td>" . $adminrow['time'] . "</td>
 
                       <td class='fit' role='group'>
                       <input type='radio' class='btn-check' name='status' id='prep'>
@@ -150,19 +151,19 @@
                       </div>
                       
                       <td><textarea id='alert' name='alert' rows='4' cols='50'></textarea></td>
-                      <td><button type='button'>Confirm</button></td>
+                      <td><input type='submit' id='confirm' name='confirm'>
                       </tr>";
                                               
-              }
-                
+              }                
             }
           ?> 
         </tbody>
         </table>
+        </form>
     
     </div> 
 
-    <a href="logout.php" role="button" class="btn btn-lg btn-light w-100">Logout</a>
+    <a href="adminlogout.php" role="button" class="btn btn-lg btn-light w-100">Logout</a>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
