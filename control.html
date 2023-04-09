@@ -94,55 +94,56 @@
         </tr>
         </thead>
         <tbody>
-          <?php
-            include("config.php");
+            <tr>
+            <th scope="row">Kyle Sanger</th>
+            <td><input type="text" class="form-control" name = "date" placeholder="Dudley Doolittle" value="" /></td>
+            <td>Appendectomy</td>
+            <td><input type="text" class="form-control" name = "date" placeholder="11/26/2022" value="" /></td>
+            <td><input type="text" class="form-control" name = "time" placeholder="6:00" value="" /></td>
+            <td class="fit"><div class='btn-group-vertical ' role='group'>
+                     <button type='button' id='prep' class='btn btn-danger'>Prep</button>
+                     <button type='button' id='surg' class='btn btn-warning opacity-25'>Surg</button>
+                     <button type='button' id='recov' class='btn btn-primary opacity-25'>Recov</button>
+                     <button type='button' id='clear' class='btn btn-success opacity-25'>Clear</button>
+                </div>     
+                </td>
+            <td><textarea id="alert" name="alert" rows="4" cols="50"></textarea></td>
+            <td><button type='button'>Confirm</button></td>
+            </tr>
 
-            // Check connection
-            if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-            }   
-            
+            <tr>
+            <th scope="row">Eddie Eagle</th>
+            <td><input type="text" class="form-control" name = "date" placeholder="Dudley Doolittle" value="" /></td>
+            <td>Cataract Surgery</td>
+            <td><input type="text" class="form-control" name = "date" placeholder="11/28/2022" value="" /></td>
+            <td><input type="text" class="form-control" name = "time" placeholder="5:37" value="" /></td>
+            <td class="fit"><div class='btn-group-vertical ' role='group'>
+                     <button type='button' id='prep' class='btn btn-danger opacity-25'>Prep</button>
+                     <button type='button' id='surg' class='btn btn-warning'>Surg</button>
+                     <button type='button' id='recov' class='btn btn-primary opacity-25'>Recov</button>
+                     <button type='button' id='clear' class='btn btn-success opacity-25'>Clear</button>
+                </div>     
+                </td>
+            <td><textarea id="alert" name="alert" rows="4" cols="50"></textarea></td>
+            <td><button type='button'>Confirm</button></td>
+            </tr>
 
-            $procsql= "SELECT * FROM procs";
-            $procresult = mysqli_query($conn,$procsql);
-            $procrow = mysqli_fetch_array($procresult,MYSQLI_ASSOC);
-
-            $patsql= "SELECT * FROM patient";
-            $patresult = mysqli_query($conn,$patsql);
-            $patrow = mysqli_fetch_array($patresult,MYSQLI_ASSOC);
-
-            $docsql= "SELECT * FROM doctor";
-            $docresult = mysqli_query($conn,$docsql);
-            $docrow = mysqli_fetch_array($docresult,MYSQLI_ASSOC);
-
-            //display the sql result set in an html table
-            $table = $conn->query($procsql);
-            if ($table->num_rows > 0) {
-              //output each result row
-              while($procrow = $procresult->fetch_assoc()){
-                
-                echo "<tr>
-                      <th scope='row'> $patrow['fname'] . $patrow['lname'] </th>
-                      <td><input type='text' class='form-control' name='doctor' placeholder='$docrow['name'] value=''/></td>
-                      <td>$procrow['name']</td>
-                      <td><input type='text' class='form-control' name='date' placeholder='$procrow['date'] value=''/></td>
-                      <td><input type='text' class='form-control' name='time' placeholder='$procrow['time'] value=''/></td>
-
-                      <td class='fit'<div class='btn-group-vertical ' role='group'>
-                      <button type='button' id='prep' class='btn btn-danger'>Prep</button>
-                      <button type='button' id='surg' class='btn btn-warning opacity-25'>Surg</button>
-                      <button type='button' id='recov' class='btn btn-primary opacity-25'>Recov</button>
-                      <button type='button' id='clear' class='btn btn-success opacity-25'>Clear</button>
-                      </div></td>
-                      
-                      <td><textarea id='alert' name='alert' rows='4' cols='50'></textarea></td>
-                      <td><button type='button'>Confirm</button></td>
-                      </tr>"
-                                              
-              }
-                
-            }
-          ?> 
+            <tr>
+            <th scope="row">Hamilton Urglar</th>
+            <td><input type="text" class="form-control" name = "date" placeholder="Stephen Strange" value="" /></td>
+            <td>Coronary Bypass</td>
+            <td><input type="text" class="form-control" name = "date" placeholder="12/2/2022" value="" /></td>
+            <td><input type="text" class="form-control" name = "time" placeholder="8:40" value="" /></td>
+            <td class="fit"><div class='btn-group-vertical ' role='group'>
+                     <button type='button' id='prep' class='btn btn-danger opacity-25'>Prep</button>
+                     <button type='button' id='surg' class='btn btn-warning opacity-25'>Surg</button>
+                     <button type='button' id='recov' class='btn btn-primary'>Recov</button>
+                     <button type='button' id='clear' class='btn btn-success opacity-25'>Clear</button>
+                </div>     
+                </td>
+            <td><textarea id="alert" name="alert" rows="4" cols="50"></textarea></td>
+            <td><button type='button'>Confirm</button></td>
+            </tr>
         </tbody>
         </table>
     
