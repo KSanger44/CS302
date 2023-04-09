@@ -54,7 +54,7 @@
                $_SESSION['username'] = $username;
                $error = "";
             
-               header("location: index.php");
+               header("location: control.php");
            }else {
                echo "Your Login Email or Password is invalid";
          }
