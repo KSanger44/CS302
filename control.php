@@ -121,6 +121,7 @@
 
             //display the sql result set in an html table
             $table = $conn->query($adminsql);
+            echo "There are " . $table->num_rows . " patient(s) currently in surgery.";
             if ($table->num_rows > 0) {
               //output each result row
               while($adminrow = $adminresult->fetch_assoc()){
@@ -151,6 +152,8 @@
         </table>
     
     </div> 
+
+    <a href="logout.php" role="button" class="btn btn-lg btn-light w-100">Logout</a>
 </div>
 
 </html>
