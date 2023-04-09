@@ -127,7 +127,7 @@
               while($adminrow = $adminresult->fetch_assoc()){
                 
                 echo "<tr>
-                      <td scope='row'>" . $adminrow['fname'] . " " . $adminrow['lname'] . "</td>
+                      <th scope='row'>" . $adminrow['fname'] . " " . $adminrow['lname'] . "</th>
                       <td>" . $adminrow['dname'] . "</td>
                       <td>" . $adminrow['procedure'] . "</td>
                       <td><input type='text' class='form-control' name='date' placeholder='" . $adminrow['date'] . "value=''/></td>
