@@ -136,7 +136,7 @@
                       <td>" . $adminrow['time'] . "</td>
 
                       <td class='fit' role='group'>
-                      <input type='radio' class='btn-check' name='status' id='prep' checked>
+                      <input type='radio' class='btn-check' name='status' id='prep'>
                       <label class='btn btn-outline-danger' for='status'>Prep</label>
 
                       <input type='radio' class='btn-check' name='status' id='surg'>

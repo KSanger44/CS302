@@ -13,7 +13,8 @@
     $zerotime = $prow["time"];
     $atime = rtrim($zerotime, '0');
     $timestamp = strtotime($atime);
-    $time = date("h:i:sa", $timestamp);
+    $time = echo date('g:i A', $timestamp);
+    
     
     $rdate = $prow["date"];
     $datestamp = strtotime($rdate);
