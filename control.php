@@ -133,12 +133,16 @@
                       <td><input type='text' class='form-control' name='date' placeholder='" . $adminrow['date'] . "value=''/></td>
                       <td><input type='text' class='form-control' name='time' placeholder='" . $adminrow['time'] . "value=''/></td>
 
-                      <td class='fit'<div class='btn-group-vertical ' role='group'>
-                      <button type='button' id='" . $adminrow['procID'] . "prep' class='prep' class='btn btn-danger'>Prep</button>
-                      <button type='button' id='" . $adminrow['procID'] . "surg' class='surg' class='btn btn-warning opacity-25'>Surg</button>
-                      <button type='button' id='" . $adminrow['procID'] . "recov' class='btn btn-primary opacity-25'>Recov</button>
-                      <button type='button' id='" . $adminrow['procID'] . "clear' class='btn btn-success opacity-25'>Clear</button>
-                      </div></td>
+                      <td class='fit' role='group'>
+                      <input type='radio' class='btn-check' name='status' id='prep'autocomplete='off'>
+                      <label class='btn btn-outline-success' for='status'>Prep</label>
+                      <input type='radio' class='btn-check' name='status' id='surg'autocomplete='off'>
+                      <label class='btn btn-outline-success' for='status'>Surg</label>
+                      <input type='radio' class='btn-check' name='status' id='recov'autocomplete='off'>
+                      <label class='btn btn-outline-success' for='status'>Recov</label>
+                      <input type='radio' class='btn-check' name='status' id='clear'autocomplete='off'>
+                      <label class='btn btn-outline-success' for='status'>Clear</label>
+                      </div>
                       
                       <td><textarea id='alert' name='alert' rows='4' cols='50'></textarea></td>
                       <td><button type='button'>Confirm</button></td>
