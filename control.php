@@ -128,7 +128,7 @@
                 
                 echo "<tr>
                       <th scope='row'>" . $adminrow['fname'] . " " . $adminrow['lname'] . "</th>
-                      <td><input type='text' class='form-control' name='doctor' placeholder='" . $adminrow['dname'] . "value=''/></td>
+                      <td>" . $adminrow['dname'] . "</td>
                       <td>" . $adminrow['procedure'] . "</td>
                       <td><input type='text' class='form-control' name='date' placeholder='" . $adminrow['date'] . "value=''/></td>
                       <td><input type='text' class='form-control' name='time' placeholder='" . $adminrow['time'] . "value=''/></td>
