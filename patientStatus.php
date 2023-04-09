@@ -9,7 +9,7 @@
     $checkin = $crow["checkin"];
 
     $pID = $_SESSION['pID'];
-    $ssql = "SELECT status FROM patient WHERE pID = '$pID'";
+    $ssql = "SELECT status FROM procs WHERE pID = '$pID'";
     $sresult = mysqli_query($conn,$ssql);
     $srow = mysqli_fetch_array($sresult,MYSQLI_ASSOC);
     $status = $srow["status"];
