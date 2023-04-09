@@ -6,7 +6,7 @@
     $dsql = "SELECT * FROM doctor WHERE dID = '$dID'";
     $dresult = mysqli_query($conn,$dsql);
     $drow = mysqli_fetch_array($dresult,MYSQLI_ASSOC);
-    $docname = $drow["name"];
+    $docname = $drow["dname"];
     $demail = $drow["email"];
     $area = $drow["areacode"];
     $prefix = $drow["prefix"];
