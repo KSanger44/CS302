@@ -122,11 +122,11 @@
               while($procrow = $procresult->fetch_assoc()){
                 
                 echo "<tr>
-                      <th scope='row'> $patrow['fname'] . $patrow['lname'] </th>
-                      <td><input type='text' class='form-control' name='doctor' placeholder='$docrow['name'] value=''/></td>
-                      <td>$procrow['name']</td>
-                      <td><input type='text' class='form-control' name='date' placeholder='$procrow['date'] value=''/></td>
-                      <td><input type='text' class='form-control' name='time' placeholder='$procrow['time'] value=''/></td>
+                      <th scope='row'>" . $patrow['fname'] . " " . $patrow['lname'] . "</th>
+                      <td><input type='text' class='form-control' name='doctor' placeholder='" . $docrow['name'] . "value=''/></td>
+                      <td>" . $procrow['name'] . "</td>
+                      <td><input type='text' class='form-control' name='date' placeholder='" . $procrow['date'] . "value=''/></td>
+                      <td><input type='text' class='form-control' name='time' placeholder='" . $procrow['time'] . "value=''/></td>
 
                       <td class='fit'<div class='btn-group-vertical ' role='group'>
                       <button type='button' id='prep' class='btn btn-danger'>Prep</button>
