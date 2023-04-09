@@ -131,7 +131,7 @@
             $table = $conn->query($adminsql);
             if ($table->num_rows > 0) {
               //output each result row
-              while($procrow = $procresult->fetch_assoc()){
+              while($adminrow = $adminresult->fetch_assoc()){
                 
                 echo "<tr>
                       <th scope='row'>" . $adminrow['fname'] . " " . $adminrow['lname'] . "</th>
