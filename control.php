@@ -147,7 +147,7 @@
                       <label class='btn btn-outline-success' for='status'>Clear</label>
                       </div>
                       
-                      <td><textarea id='alert' name='alert' rows='4' cols='50'></textarea></td>
+                      <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
                       <td><input type='submit' id='confirm" . $adminrow['pID'] . "' name='confirm'>
                       </tr>";
                                               
