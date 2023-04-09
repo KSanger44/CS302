@@ -134,10 +134,10 @@
                       <td><input type='text' class='form-control' name='time' placeholder='" . $adminrow['time'] . "value=''/></td>
 
                       <td class='fit'<div class='btn-group-vertical ' role='group'>
-                      <button type='button' id='prep' class='btn btn-danger'>Prep</button>
-                      <button type='button' id='surg' class='btn btn-warning opacity-25'>Surg</button>
-                      <button type='button' id='recov' class='btn btn-primary opacity-25'>Recov</button>
-                      <button type='button' id='clear' class='btn btn-success opacity-25'>Clear</button>
+                      <button type='button' id='" . $adminrow['procID'] . "prep' class='prep' class='btn btn-danger'>Prep</button>
+                      <button type='button' id='" . $adminrow['procID'] . "surg' class='surg' class='btn btn-warning opacity-25'>Surg</button>
+                      <button type='button' id='" . $adminrow['procID'] . "recov' class='btn btn-primary opacity-25'>Recov</button>
+                      <button type='button' id='" . $adminrow['procID'] . "clear' class='btn btn-success opacity-25'>Clear</button>
                       </div></td>
                       
                       <td><textarea id='alert' name='alert' rows='4' cols='50'></textarea></td>
