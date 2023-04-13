@@ -167,11 +167,11 @@
                             SET `status` = 's' 
                             WHERE `procs`.`procID` = 1";
 
-            if (mysqli_query($conn, $sql)) {
+            if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
               header("Refresh:0");
             } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                echo "Error: " . $updatesql . "<br>" . mysqli_error($conn);
             }
             }
 
