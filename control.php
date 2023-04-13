@@ -157,21 +157,16 @@
                                               
               }                
             }
-
-            $status = isset($_POST['status']) ? $_POST['status'] : "";            
-
-          if(isset($_POST['confirm1'])){
-
-          // Procedural update of procs table
-           $sql = "UPDATE procs
-                  SET status = '$status'
-                  WHERE pID = '1'"
-       
-
-            }//end of isset if stmt
             
-          ?> 
+            $status = isset($_POST['pID']) ? $_POST['pID'] : "";
+            
+            if(isset($_POST['status' + $_POST['pID']])){
+              $updatesql = "UPDATE `procs`
+                            SET `status` = 's' 
+                            WHERE `procs`.`procID` = 1";
+            }
 
+          ?> 
         </table>
         </form>
     
