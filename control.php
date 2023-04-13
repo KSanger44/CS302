@@ -159,6 +159,8 @@
             }
             
             $status1 = isset($_POST['status1']) ? $_POST['status1'] : "";
+            echo $status1;
+
             
             if(isset($_POST['confirm1'])&& $status1 != ""){
               $updatesql = "UPDATE `procs`
