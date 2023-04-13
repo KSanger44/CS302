@@ -127,7 +127,7 @@
               //output each result row
               while($adminrow = $adminresult->fetch_assoc()){
                 
-                echo "<form action="" method="post">
+                echo "<form action='' method='post'>
                       <tr>
                       <th scope='row'>" . $adminrow['fname'] . " " . $adminrow['lname'] . "</th>
                       <td>" . $adminrow['dname'] . "</td>
