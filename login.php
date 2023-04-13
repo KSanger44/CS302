@@ -16,9 +16,11 @@
             <h4>Login</h4>
             <form action="" method="post">
                 <div class="form-group">
+                    <label for="email">Email:</label><br>
                     <input type="text" class="form-control" name = "email" placeholder="Email" value="" />
                 </div>
                 <div class="form-group">
+                    <label for="password">Password:</label><br>
                     <input type="password" class="form-control" name = "password" placeholder="Password" value="" />
                 </div><br>
                 

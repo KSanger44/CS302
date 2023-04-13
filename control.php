@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script>
       function sortTable(n) {
@@ -96,7 +97,7 @@
         <th scope="col">Update</th>
         </tr>
         </thead>
-        <tbody>
+
           <?php
             include("config.php");
 
@@ -116,7 +117,7 @@
                         ON procs.dID = doctor.dID";
 
             $adminresult = mysqli_query($conn,$adminsql);
-            $adminrow = mysqli_fetch_array($adminresult,MYSQLI_ASSOC);
+            //$adminrow = mysqli_fetch_array($adminresult,MYSQLI_ASSOC);
 
 
             //display the sql result set in an html table
@@ -134,17 +135,18 @@
                       <td>" . $adminrow['time'] . "</td>
 
                       <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>
-                      <input type='radio' class='btn-check' name='status' id='prep" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-danger' for='status'>Prep</label>
 
-                      <input type='radio' class='btn-check' name='status' id='surg" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-warning' for='status'>Surg</label>
+                      <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='prep" . $adminrow['pID'] . "'>
+                      <label class='btn btn-outline-danger' for='prep" . $adminrow['pID'] . "'>Prep</label>
 
-                      <input type='radio' class='btn-check' name='status' id='recov" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-primary' for='status'>Recov</label>
+                      <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='surg" . $adminrow['pID'] . "'>
+                      <label class='btn btn-outline-warning' for='surg" . $adminrow['pID'] . "'>Surg</label>
 
-                      <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-success' for='status'>Clear</label>
+                      <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='recov" . $adminrow['pID'] . "'>
+                      <label class='btn btn-outline-primary' for='recov" . $adminrow['pID'] . "'>Recov</label>
+
+                      <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='clear" . $adminrow['pID'] . "'>
+                      <label class='btn btn-outline-success' for='clear" . $adminrow['pID'] . "'>Clear</label>
                       </div>
                       
                       <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
@@ -153,8 +155,12 @@
                                               
               }                
             }
+
+            if(isset($_POST['submit']) && $name != ""){
+
+            }
           ?> 
-        </tbody>
+
         </table>
         </form>
     
