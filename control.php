@@ -158,7 +158,7 @@
               }                
             }
             
-            $status = isset($_POST['pID']) ? $_POST['pID'] : "";
+            $status = isset($_POST['status']) ? $_POST['status'] : "";
             
             if(isset($_POST['confirm1'])){
               $updatesql = "UPDATE `procs`
