@@ -164,6 +164,13 @@
               $updatesql = "UPDATE `procs`
                             SET `status` = 's' 
                             WHERE `procs`.`procID` = 1";
+
+            if (mysqli_query($conn, $sql)) {
+              echo "Record Updated successfully.";
+              header("Refresh:0");
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
             }
 
           ?> 
