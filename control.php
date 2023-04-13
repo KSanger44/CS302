@@ -127,7 +127,8 @@
               //output each result row
               while($adminrow = $adminresult->fetch_assoc()){
                 
-                echo "<tr>
+                echo "<form action="" method="post">
+                      <tr>
                       <th scope='row'>" . $adminrow['fname'] . " " . $adminrow['lname'] . "</th>
                       <td>" . $adminrow['dname'] . "</td>
                       <td>" . $adminrow['procedure'] . "</td>
@@ -137,21 +138,22 @@
                       <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>
 
                       <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='prep" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-danger' for='prep" . $adminrow['pID'] . "'>Prep</label>
+                      <label class='btn btn-outline-danger' value='p' for='prep" . $adminrow['pID'] . "'>Prep</label>
 
                       <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='surg" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-warning' for='surg" . $adminrow['pID'] . "'>Surg</label>
+                      <label class='btn btn-outline-warning' value='s' for='surg" . $adminrow['pID'] . "'>Surg</label>
 
                       <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='recov" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-primary' for='recov" . $adminrow['pID'] . "'>Recov</label>
+                      <label class='btn btn-outline-primary' value='r' for='recov" . $adminrow['pID'] . "'>Recov</label>
 
                       <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='clear" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-success' for='clear" . $adminrow['pID'] . "'>Clear</label>
+                      <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'>Clear</label>
                       </div>
                       
                       <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
                       <td><input type='submit' id='confirm" . $adminrow['pID'] . "' name='confirm'>
-                      </tr>";
+                      </tr>
+                      </form>";
                                               
               }                
             }
