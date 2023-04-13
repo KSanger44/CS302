@@ -158,9 +158,18 @@
               }                
             }
 
-            if(isset($_POST['submit']) && $name != ""){
+            $status = isset($_POST['status']) ? $_POST['status'] : "";            
 
-            }
+          if(isset($_POST['confirm1'])){
+
+          // Procedural update of procs table
+           $sql = "UPDATE procs
+                  SET status = '$status'
+                  WHERE pID = '1'"
+       
+
+            }//end of isset if stmt
+            
           ?> 
 
         </table>
