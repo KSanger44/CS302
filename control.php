@@ -168,11 +168,13 @@
               $status = ($_POST['status' . $pID]);
               
                
-              echo "status is " . $status . ".";
+              //echo "status is " . $status . ".";
 
               $updatesql = "UPDATE PROCS
                             SET procs.status = $status 
                             WHERE procs.procID = $pID";
+
+              $alertsql = "INSERT INTO "
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
