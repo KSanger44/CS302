@@ -162,7 +162,7 @@
             
 
             
-            if(isset($_POST['status' . $_POST['pID']] )){
+            if(isset($_POST['confirm' . $_POST['pID']] )){
 
               $pID = $_POST['pID'];
               $status = ($_POST['status' . $pID]);
