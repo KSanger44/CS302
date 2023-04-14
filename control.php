@@ -159,7 +159,8 @@
             }
             
             $status = isset($_POST['status']) ? $_POST['status'] : "";
-            //echo $status1;
+            
+            echo "<br>" . $status;
 
             
             if(isset($_POST['confirm'])&& $status != ""){
