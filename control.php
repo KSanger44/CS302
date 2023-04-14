@@ -83,7 +83,6 @@
     <h4>Patients in Surgery</h4>
     <div class='container'>
 
-    <form action="" method="post">
     <table class="table table-striped">
     <thead>
         <tr>
@@ -161,10 +160,10 @@
             }
             
 
-
             
             if(isset($_POST['status' + $_POST['pid']])){
               $status = isset($_POST['status']) ? $_POST['status'] : "";
+              $pID = $_POST['pid'];
               $updatesql = "UPDATE `procs`
                             SET `status` = $status 
                             WHERE `procs`.`procID` = $pID";
@@ -179,7 +178,6 @@
 
           ?> 
         </table>
-        </form>
     
     </div> 
 
