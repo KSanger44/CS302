@@ -136,8 +136,6 @@
 
                       <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>
 
-                      <input type='hidden' name='pid' value='$adminRow['pId']' />
-
                       <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='prep" . $adminrow['pID'] . "'>
                       <label class='btn btn-outline-danger' value='p' for='prep" . $adminrow['pID'] . "'>Prep</label>
 
@@ -152,6 +150,9 @@
                       </div>
                       
                       <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
+
+                      <input type='hidden' name='pID' value=$adminrow['pID']>
+
                       <td><input type='submit' id='confirm" . $adminrow['pID'] . "' name='confirm" . $adminrow['pID'] . " value='Submit'>
                       </tr>
                       </form>";
@@ -161,9 +162,9 @@
             
 
             
-            if(isset($_POST['status' + $_POST['pid']])){
+            if(isset($_POST['status' + $_POST['pID']])){
               $status = isset($_POST['status']) ? $_POST['status'] : "";
-              $pID = $_POST['pid'];
+              $pID = $_POST['pID'];
               $updatesql = "UPDATE `procs`
                             SET `status` = $status 
                             WHERE `procs`.`procID` = $pID";
