@@ -162,7 +162,7 @@
             
 
             
-            if(isset($_POST['status' + $_POST['pID']])){
+            if(isset($_POST['status' . $_POST['pID']])){
               $status = isset($_POST['status']) ? $_POST['status'] : "";
               $pID = $_POST['pID'];
               $updatesql = "UPDATE `procs`
