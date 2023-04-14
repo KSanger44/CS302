@@ -158,14 +158,14 @@
               }                
             }
             
-            $status1 = isset($_POST['status1']) ? $_POST['status1'] : "";
+            $status = isset($_POST['status']) ? $_POST['status'] : "";
             //echo $status1;
 
             
-            if(isset($_POST['confirm1'])&& $status1 != ""){
+            if(isset($_POST['confirm'])&& $status != ""){
               $updatesql = "UPDATE `procs`
-                            SET `status` = 's' 
-                            WHERE `procs`.`procID` = 1";
+                            SET `status` = $status 
+                            WHERE `procs`.`procID` = $adminrow['pID']";
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
