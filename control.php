@@ -136,7 +136,7 @@
 
                       <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>
 
-                      <input type='hidden' name='pid' value=$adminRow['pId'] />
+                      <input type='hidden' name='pid' value='$adminRow['pId']' />
 
                       <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='prep" . $adminrow['pID'] . "'>
                       <label class='btn btn-outline-danger' value='p' for='prep" . $adminrow['pID'] . "'>Prep</label>
