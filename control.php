@@ -151,7 +151,7 @@
                       
                       <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
 
-                      <input type='hidden' name='pID' value="$adminrow['pID']">
+                      <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
 
                       <td><input type='submit' id='confirm" . $adminrow['pID'] . "' name='confirm" . $adminrow['pID'] . " value='Submit'>
                       </tr>
