@@ -159,6 +159,7 @@
             }
             
             $status = isset($_POST['status']) ? $_POST['status'] : "";
+            $pID = $adminrow['pID'];
             
             echo "<br>" . $status;
 
@@ -166,7 +167,7 @@
             if(isset($_POST['confirm'])&& $status != ""){
               $updatesql = "UPDATE `procs`
                             SET `status` = $status 
-                            WHERE `procs`.`procID` = $adminrow['pID']";
+                            WHERE `procs`.`procID` = $pID";
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
