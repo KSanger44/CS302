@@ -165,7 +165,7 @@
             if(isset($_POST['status' . $_POST['pID']] )){
 
               $pID = $_POST['pID'];
-              $status = isset($_POST['status' . $_POST['pID']]);
+              $status = ($_POST['status' . $pID]);
               
                
               //echo "status is" . $status . ".";
