@@ -165,7 +165,7 @@
             if(isset($_POST['confirm'])&& $status != ""){
               $updatesql = "UPDATE `procs`
                             SET `status` = $status 
-                            WHERE `procs`.`procID` = $adminrow['pID']";
+                            WHERE `procs`.`procID` = 1";
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
