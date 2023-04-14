@@ -158,13 +158,14 @@
               }                
             }
             
-            $status = isset($_POST['status']) ? $_POST['status'] : "";
-            $pID = $adminrow['pID'];
+            
+            
             
             echo "<br>" . $status;
 
             
-            if(isset($_POST['confirm'])&& $status != ""){
+            if(isset($_POST['confirm'])){
+              $status = isset($_POST['status']) ? $_POST['status'] : "";
               $updatesql = "UPDATE `procs`
                             SET `status` = $status 
                             WHERE `procs`.`procID` = $pID";
