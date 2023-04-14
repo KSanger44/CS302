@@ -168,7 +168,7 @@
               $status = ($_POST['status' . $pID]);
               
                
-              //echo "status is" . $status . ".";
+              echo "status is" . $status . ".";
 
               $updatesql = "UPDATE PROCS
                             SET procs.status = $status 
