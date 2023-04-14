@@ -167,7 +167,7 @@
               $pID = $_POST['pID'];
               $updatesql = "UPDATE `procs`
                             SET `status` = $status 
-                            WHERE `procs`.`procID` = $pID";
+                            WHERE `procs.procID` = $pID";
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
