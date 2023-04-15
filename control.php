@@ -107,7 +107,7 @@
             
 
             $adminsql ="SELECT patient.pID, patient.fname, patient.lname,
-                        procs.procedure, procs.date, procs.time, procs.status,
+                        procs.procID, procs.procedure, procs.date, procs.time, procs.status,
                         doctor.dname
                         FROM procs
                         JOIN patient
