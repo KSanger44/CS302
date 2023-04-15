@@ -101,17 +101,17 @@
                 $aresult = mysqli_query($conn,$asql);
                 $table = $conn->query($asql);
 
-                echo "There are " . $table->num_rows . " Alerts.";
+                echo "There are " . $table->num_rows . " Alert(s).";
                 if ($table->num_rows > 0) {
                   //output each result row
                   while($arow = $aresult->fetch_assoc()){
-                    echo "<tr>
-                            <td>" . $arow['dt'] . "</td>
-                            <td colspan='3'>" . $arow['message'] . "</td>
-                            </tr>";
+                    echo "
+                    <tr>
+                    <td>" . $arow['dt'] . "</td>
+                    <td colspan='3'>" . $arow['message'] . "</td>
+                    </tr>"
                   }
                 }
-
         ?>
     </tbody>
     </table>    
