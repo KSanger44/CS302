@@ -174,7 +174,7 @@
                             SET procs.status = $status 
                             WHERE procs.procID = $pID";
 
-              $alertsql = "INSERT INTO "
+              $alertsql = "INSERT INTO ";
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
