@@ -108,6 +108,9 @@
             $date = date("h:i:sa");
             echo "<br> date is " . $date . ".<br>";
 
+            $date2 = getdate();
+            echo "<br> getDate() " . $date2 . ".<br>";
+
             $adminsql ="SELECT patient.pID, patient.fname, patient.lname,
                         procs.procID, procs.procedure, procs.date, procs.time, procs.status,
                         doctor.dname
