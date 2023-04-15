@@ -201,7 +201,7 @@
                           break;        
                       }
 
-                      <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
+                      "<td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
 
                       <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
                       <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
