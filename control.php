@@ -152,7 +152,16 @@
         
                             <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'>
                             <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'>Clear</label>
-                            </div></td>";
+                            </div></td>
+                            
+                            <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
+
+                            <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
+                            <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
+
+                            <td><input type='submit' id='confirm' name='confirm' value='Submit'>
+                            </tr>
+                            </form>";
                             break;
                         case 's':
                           echo"
@@ -167,7 +176,16 @@
         
                             <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'>
                             <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'>Clear</label>
-                            </div></td>";
+                            </div></td>
+                            
+                            <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
+
+                            <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
+                            <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
+
+                            <td><input type='submit' id='confirm' name='confirm' value='Submit'>
+                            </tr>
+                            </form>";
                             break;
                         case 'r':
                           echo"
@@ -182,7 +200,16 @@
         
                             <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'>
                             <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'>Clear</label>
-                            </div></td>";
+                            </div></td>
+                            
+                            <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
+
+                            <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
+                            <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
+
+                            <td><input type='submit' id='confirm' name='confirm' value='Submit'>
+                            </tr>
+                            </form>";
                             break;
                         case 'c':
                           echo"
@@ -197,18 +224,18 @@
       
                           <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'>
                           <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'checked>Clear</label>
-                          </div></td>";
+                          </div></td>
+                          
+                          <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
+
+                            <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
+                            <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
+
+                            <td><input type='submit' id='confirm' name='confirm' value='Submit'>
+                            </tr>
+                            </form>";
                           break;        
                       }
-
-                      "<td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
-
-                      <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
-                      <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
-
-                      <td><input type='submit' id='confirm' name='confirm' value='Submit'>
-                      </tr>
-                      </form>";
                                               
               }                
             }
