@@ -68,7 +68,7 @@
             }
             echo"<div class='container'>";
             echo $desc; 
-            echo "</div>";
+            echo "<br></div>";
             ?>
 
         </div>
