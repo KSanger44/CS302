@@ -162,12 +162,12 @@
             
 
             
-            if(isset($_POST['confirm' . $_POST['pID']] )){
+            if(isset($_POST['confirm'] )){
 
               $pID = $_POST['pID'];
               $status = ($_POST['status' . $pID]);
               
-               
+               echo "pID is " . $pID . ".";
               //echo "status is " . $status . ".";
 
               $updatesql = "UPDATE PROCS
