@@ -172,8 +172,8 @@
               echo "status is " . $status . ".";
 
               $updatesql = "UPDATE PROCS
-                            SET procs.status = $status 
-                            WHERE procs.procID = $pID";
+                            SET procs.status = '$status' 
+                            WHERE procs.procID = '$pID'";
 
               $alertsql = "INSERT INTO ";
 
