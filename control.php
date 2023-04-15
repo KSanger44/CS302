@@ -105,6 +105,7 @@
               die("Connection failed: " . $conn->connect_error);
             }   
             
+            $date = date("h:i:sa");
             echo "<br> date is " . $date . ".<br>";
 
             $adminsql ="SELECT patient.pID, patient.fname, patient.lname,
