@@ -248,7 +248,7 @@
               $status = $_POST['status'];
               
 
-              echo "pID is " . $pID . ".<br>";
+              echo "<br> pID is " . $pID . ".<br>";
 
               echo "status is " . $status . ".<br>";
 
@@ -261,8 +261,10 @@
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
-              header("location: control.php");
-              
+              $URL="http://localhost/dashboard/302//CS302/control.php";
+              echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+              echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+                            
             } else {
                 echo "Error: " . $updatesql . "<br>" . mysqli_error($conn);
             }
