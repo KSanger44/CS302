@@ -141,8 +141,8 @@
                       switch ($stat) {
                         case 'p':
                           echo"
-                            <input type='radio' class='btn-check' name='status' id='prep" . $adminrow['pID'] . "'>
-                            <label class='btn btn-outline-danger' value='p' for='prep" . $adminrow['pID'] . "' checked>Prep</label>
+                            <input type='radio' class='btn-check' name='status' id='prep" . $adminrow['pID'] . "' checked>
+                            <label class='btn btn-outline-danger' value='p' for='prep" . $adminrow['pID'] . "'>Prep</label>
         
                             <input type='radio' class='btn-check' name='status' id='surg" . $adminrow['pID'] . "'>
                             <label class='btn btn-outline-warning' value='s' for='surg" . $adminrow['pID'] . "'>Surg</label>
@@ -168,8 +168,8 @@
                             <input type='radio' class='btn-check' name='status' id='prep" . $adminrow['pID'] . "'>
                             <label class='btn btn-outline-danger value='p' for='prep" . $adminrow['pID'] . "'>Prep</label>
         
-                            <input type='radio' class='btn-check' name='status' id='surg" . $adminrow['pID'] . "'>
-                            <label class='btn btn-outline-warning' value='s' for='surg" . $adminrow['pID'] . "'checked>Surg</label>
+                            <input type='radio' class='btn-check' name='status' id='surg" . $adminrow['pID'] . "'checked>
+                            <label class='btn btn-outline-warning' value='s' for='surg" . $adminrow['pID'] . "'>Surg</label>
         
                             <input type='radio' class='btn-check' name='status' id='recov" . $adminrow['pID'] . "'>
                             <label class='btn btn-outline-primary' value='r' for='recov" . $adminrow['pID'] . "'>Recov</label>
@@ -195,8 +195,8 @@
                             <input type='radio' class='btn-check' name='status' id='surg" . $adminrow['pID'] . "'>
                             <label class='btn btn-outline-warning' value='s' for='surg" . $adminrow['pID'] . "'>Surg</label>
         
-                            <input type='radio' class='btn-check' name='status' id='recov" . $adminrow['pID'] . "'>
-                            <label class='btn btn-outline-primary' value='r' for='recov" . $adminrow['pID'] . "'checked>Recov</label>
+                            <input type='radio' class='btn-check' name='status' id='recov" . $adminrow['pID'] . "'checked>
+                            <label class='btn btn-outline-primary' value='r' for='recov" . $adminrow['pID'] . "'>Recov</label>
         
                             <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'>
                             <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'>Clear</label>
@@ -222,8 +222,8 @@
                           <input type='radio' class='btn-check' name='status' id='recov" . $adminrow['pID'] . "'>
                           <label class='btn btn-outline-primary' value='r' for='recov" . $adminrow['pID'] . "'>Recov</label>
       
-                          <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'>
-                          <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'checked>Clear</label>
+                          <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'checked>
+                          <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'>Clear</label>
                           </div></td>
                           
                           <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
