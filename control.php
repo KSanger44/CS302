@@ -165,7 +165,7 @@
             if(isset($_POST['confirm'] )){
 
               $pID = $_POST['pID'];
-              $status = ($_POST['status']);
+              $status = $_POST['status'];
               
               echo "pID is " . $pID . ".";
               echo "status is " . $status . ".";
