@@ -113,7 +113,9 @@
                         JOIN patient
                         ON procs.pID = patient.pID
                         JOIN doctor
-                        ON procs.dID = doctor.dID";
+                        ON procs.dID = doctor.dID
+                        JOIN alert
+                        ON procs.procID = alert.procID";
 
             $adminresult = mysqli_query($conn,$adminsql);
             //$adminrow = mysqli_fetch_array($adminresult,MYSQLI_ASSOC);
@@ -230,7 +232,7 @@
 
                             <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
                             <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
-                            <input type='hidden' name='proc' value=" . $adminrow['procID'] . ">
+                            <input type='hidden' name='procID' value=" . $adminrow['procID'] . ">
 
                             <td><input type='submit' id='confirm' name='confirm' value='Submit'>
                             </tr>
@@ -247,8 +249,9 @@
 
               $pID = $_POST['pID'];
               $status = $_POST['status'];
-              $procID = $_POST['proc'];
+              $procID = $_POST['procID'];
               $date = date("h:i:sa");
+              $alert = $_POST['alert'];
               
 
               echo "<br> pID is " . $pID . ".<br>";
@@ -261,8 +264,8 @@
                             WHERE procs.procID = '$pID'";
 
 
-              $alertsql = "INSERT INTO `alert` (`aID`, `type`, `procID`, `seen`, `datetime`)
-                                        VALUES ('1', 'd', '$procID', '0', '$date')";             
+              $alertsql = "INSERT INTO `alert` (`aID`, `type`, `procID`, `seen`, `datetime`, `text`)
+                                        VALUES ('1', 'd', '$procID', '0', '$date', `$alert`)";             
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Status Updated successfully.";
