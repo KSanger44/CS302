@@ -230,6 +230,7 @@
 
                             <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
                             <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
+                            <input type='hidden' name='proc' value=" . $adminrow['procID'] . ">
 
                             <td><input type='submit' id='confirm' name='confirm' value='Submit'>
                             </tr>
@@ -246,6 +247,8 @@
 
               $pID = $_POST['pID'];
               $status = $_POST['status'];
+              $procID = $_POST['procID'];
+              $date = date();
               
 
               echo "<br> pID is " . $pID . ".<br>";
@@ -257,7 +260,8 @@
                             SET procs.status = '$status' 
                             WHERE procs.procID = '$pID'";
 
-              $alertsql = "INSERT INTO ";
+              $alertsql = "INSERT INTO ALERT
+                           VALUES (NULL, 'd', '$procID', '0', '$date')";
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
