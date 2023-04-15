@@ -97,7 +97,7 @@
     </thead>
     <tbody>
         <?php
-                $asql = "SELECT 'datetime', 'text' FROM alert WHERE procID = '$procID'"
+                $asql = "SELECT 'datetime', 'text' FROM alert WHERE procID = '$procID'";
                 $aresult = mysqli_query($conn,$asql);
                 $arow = mysqli_fetch_array($aresult,MYSQLI_ASSOC);
 
