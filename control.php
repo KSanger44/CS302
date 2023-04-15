@@ -259,6 +259,8 @@
 
               //echo "status is " . $status . ".<br>";
 
+              echo "<br> date is " . $date . ".<br>";
+
 
               $updatesql = "UPDATE PROCS
                             SET procs.status = '$status' 
