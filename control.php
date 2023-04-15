@@ -260,8 +260,8 @@
               $pID = $_POST['pID'];
               $status = $_POST['status'];
               $procID = $_POST['procID'];
-              //$date = date("h:i:sa");
-              $date = GETDATE();
+              $date = date("h:i:sa");
+              //$date = GETDATE();
               $alert = $_POST['alert'];
               
 
