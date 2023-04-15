@@ -253,7 +253,8 @@
               $pID = $_POST['pID'];
               $status = $_POST['status'];
               $procID = $_POST['procID'];
-              $date = date("h:i:sa");
+              //$date = date("h:i:sa");
+              $date = GETDATE();
               $alert = $_POST['alert'];
               
 
@@ -268,7 +269,7 @@
 
 
               $alertsql = "INSERT INTO `alert` (`aID`, `type`, `procID`, `seen`, `dt`, `message`)
-                                        VALUES (NULL, 'd', '$procID', '0', GETDATE(), '$alert')";             
+                                        VALUES (NULL, 'd', '$procID', '0', '$date', '$alert')";             
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Status Updated successfully.";
