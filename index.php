@@ -109,7 +109,7 @@
                     <tr>
                     <td>" . $arow['dt'] . "</td>
                     <td colspan='3'>" . $arow['message'] . "</td>
-                    </tr>"
+                    </tr>";
                   }
                 }
         ?>
