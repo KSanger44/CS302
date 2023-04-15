@@ -134,7 +134,7 @@
                       <td>" . $adminrow['dname'] . "</td>
                       <td>" . $adminrow['procedure'] . "</td>
                       <td>" . $adminrow['date'] . "</td>
-                      <td>" . date('h:i:s a', strtotime($time)) . "</td>
+                      <td>" . date('h:i a', strtotime($time)) . "</td>
 
                       <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>";
 
