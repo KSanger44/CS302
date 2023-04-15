@@ -247,10 +247,10 @@
               $pID = $_POST['pID'];
               $status = $_POST['status'];
               
-              echo "<br>";
-              echo "pID is " . $pID . ".";
-              echo "<br>";
-              echo "status is " . $status . ".";
+
+              echo "pID is " . $pID . ".<br>";
+
+              echo "status is " . $status . ".<br>";
 
 
               $updatesql = "UPDATE PROCS
