@@ -88,7 +88,7 @@
         <a href="logout.php" role="button" class="btn btn-lg btn-light w-100">Logout</a>
     </div>
 
-    <div class='container' id='alertdiv'>
+    <div class='container row justify-content-center' id='alertdiv'>
     <table class="table table-striped">
     <thead>
         <tr>
@@ -100,12 +100,13 @@
                 $asql = "SELECT * FROM alert WHERE procID = '$procID'";
                 $aresult = mysqli_query($conn,$asql);
                 $table = $conn->query($asql);
-
-
+                $arow = mysqli_fetch_array($aresult,MYSQLI_ASSOC);
+                $aresult = mysqli_query($conn,$asql);
+                
                 echo "There are " . $table->num_rows . " Alert(s).";
                 if ($table->num_rows > 0) {
-                    
-                $arow = mysqli_fetch_array($aresult,MYSQLI_ASSOC);
+
+                
                   //output each result row
                   while($arow = $aresult->fetch_assoc()){
                     echo "
