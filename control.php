@@ -147,7 +147,7 @@
   
                       <input type='radio' class='btn-check' name='status' id='clear" . $adminrow['pID'] . "'>
                       <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'>Clear</label>
-                      </td></div>
+                      </div></td>
                       
                       <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
 
