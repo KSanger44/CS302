@@ -145,7 +145,7 @@
                       <input type='radio' class='btn-check' name='status' id='recov'>
                       <label class='btn btn-outline-primary' value='r' for='recov'>Recov</label>
 
-                      <input type='radio' class='btn-check' name='statu' id='clear>
+                      <input type='radio' class='btn-check' name='status' id='clear'>
                       <label class='btn btn-outline-success' value='c' for=''>Clear</label>
                       </div>
                       
