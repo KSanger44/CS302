@@ -270,7 +270,7 @@
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Status Updated successfully.";
-              $URL="http://localhost/dashboard/302//CS302/control.php";
+              //$URL="http://localhost/dashboard/302//CS302/control.php";
               echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
               echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
                             
