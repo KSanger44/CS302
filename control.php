@@ -125,7 +125,7 @@
             if ($table->num_rows > 0) {
               //output each result row
               while($adminrow = $adminresult->fetch_assoc()){
-                $stat = $_POST['stat'];
+                $stat = $adminrow['status'];
 
 
                 echo "<form action='' method='post'>
