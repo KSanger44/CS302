@@ -261,7 +261,7 @@
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Record Updated successfully.";
-              header("Refresh:0");
+              header("location: control.php");
               
             } else {
                 echo "Error: " . $updatesql . "<br>" . mysqli_error($conn);
