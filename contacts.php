@@ -75,6 +75,38 @@
         <a href="contacts.php" role="button" class="btn btn-lg btn-primary w-100">Contacts</a>
         <a href="logout.php" role="button" class="btn btn-lg btn-light w-100">Logout</a>
     </div>
+    <div class='container' id='alertdiv'>
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th colspan="4" class="text-center"><h3>Alerts</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+                $asql = "SELECT * FROM alert WHERE procID = '$procID'";
+                $aresult = mysqli_query($conn,$asql);
+                $table = $conn->query($asql);
+                $arow = mysqli_fetch_array($aresult,MYSQLI_ASSOC);
+                $aresult = mysqli_query($conn,$asql);
+
+                echo "There are " . $table->num_rows . " Alert(s).";
+                if ($table->num_rows > 0) {
+
+                
+                  //output each result row
+                  while($arow = $aresult->fetch_assoc()){
+                    echo "
+                    <tr>
+                    <td>" . $arow['dt'] . "</td>
+                    <td colspan='3'>" . $arow['message'] . "</td>
+                    </tr>";
+                  }
+                }
+        ?>
+    </tbody>
+    </table>    
+    </div>
 </body>
 
 </html>

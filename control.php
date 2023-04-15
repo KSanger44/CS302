@@ -261,22 +261,12 @@
               $status = $_POST['status'];
               $procID = $_POST['procID'];
               $date = date("h:i:sa");
-              //$date = GETDATE();
               $alert = $_POST['alert'];
-              
-
-              //echo "<br> pID is " . $pID . ".<br>";
-
-              //echo "status is " . $status . ".<br>";
-
 
               $updatesql = "UPDATE PROCS
                             SET procs.status = '$status' 
                             WHERE procs.procID = '$pID'";
-
-
-              $alertsql = "INSERT INTO `alert` (`aID`, `type`, `procID`, `seen`, `message`, `dt`)
-                                        VALUES (NULL, 'd', '$procID', '0', '$alert', '$date')";             
+           
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Status Updated successfully.";
@@ -287,6 +277,19 @@
             } else {
                 echo "Error: " . $updatesql . "<br>" . mysqli_error($conn);
             }
+          }
+
+          if(isset($_POST['confirm']) && $alert != ""){
+
+            $pID = $_POST['pID'];
+            $status = $_POST['status'];
+            $procID = $_POST['procID'];
+            $date = date("h:i:sa");
+            $alert = $_POST['alert'];
+
+
+            $alertsql = "INSERT INTO `alert` (`aID`, `type`, `procID`, `seen`, `message`, `dt`)
+                                      VALUES (NULL, 'd', '$procID', '0', '$alert', '$date')";      
 
             if (mysqli_query($conn, $alertsql)) {
               echo "Alert sent successfully.";
