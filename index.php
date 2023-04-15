@@ -88,11 +88,11 @@
         <a href="logout.php" role="button" class="btn btn-lg btn-light w-100">Logout</a>
     </div>
 
-    <div class='container row justify-content-center' id='alertdiv'>
+    <div class='container' id='alertdiv'>
     <table class="table table-striped">
     <thead>
         <tr>
-            <th colspan="4">Alerts</th>
+            <th colspan="4" class="text-center"><h3>Alerts</h3></th>
         </tr>
     </thead>
     <tbody>
@@ -102,7 +102,7 @@
                 $table = $conn->query($asql);
                 $arow = mysqli_fetch_array($aresult,MYSQLI_ASSOC);
                 $aresult = mysqli_query($conn,$asql);
-                
+
                 echo "There are " . $table->num_rows . " Alert(s).";
                 if ($table->num_rows > 0) {
 
