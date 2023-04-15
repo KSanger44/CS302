@@ -265,7 +265,7 @@
                             WHERE procs.procID = '$pID'";
 
 
-              $alertsql = "INSERT INTO `alert` (`aID`, `type`, `procID`, `seen`, `datetime`, `text`)
+              $alertsql = "INSERT INTO `alert` (`aID`, `type`, `procID`, `seen`, `dt`, `message`)
                                         VALUES (NULL, 'd', '$procID', '0', '$date', '$alert')";             
 
             if (mysqli_query($conn, $updatesql)) {
