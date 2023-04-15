@@ -113,9 +113,7 @@
                         JOIN patient
                         ON procs.pID = patient.pID
                         JOIN doctor
-                        ON procs.dID = doctor.dID
-                        JOIN alert
-                        ON procs.procID = alert.procID";
+                        ON procs.dID = doctor.dID";
 
             $adminresult = mysqli_query($conn,$adminsql);
             //$adminrow = mysqli_fetch_array($adminresult,MYSQLI_ASSOC);
