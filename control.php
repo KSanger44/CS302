@@ -152,6 +152,7 @@
                       <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
 
                       <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
+                      <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
 
                       <td><input type='submit' id='confirm' name='confirm' value='Submit'>
                       </tr>
@@ -166,10 +167,13 @@
 
               $pID = $_POST['pID'];
               $status = $_POST['status'];
+              $stat = $_POST['stat'];
               echo "<br>";
               echo "pID is " . $pID . ".";
               echo "<br>";
               echo "status is " . $status . ".";
+              echo "<br>";
+              echo "stat is " . $stat . ".";
 
               $updatesql = "UPDATE PROCS
                             SET procs.status = '$status' 
