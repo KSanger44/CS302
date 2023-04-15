@@ -105,6 +105,7 @@
               die("Connection failed: " . $conn->connect_error);
             }   
             
+            echo "<br> date is " . $date . ".<br>";
 
             $adminsql ="SELECT patient.pID, patient.fname, patient.lname,
                         procs.procID, procs.procedure, procs.date, procs.time, procs.status,
@@ -258,8 +259,6 @@
               //echo "<br> pID is " . $pID . ".<br>";
 
               //echo "status is " . $status . ".<br>";
-
-              echo "<br> date is " . $date . ".<br>";
 
 
               $updatesql = "UPDATE PROCS
