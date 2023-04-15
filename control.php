@@ -274,10 +274,8 @@
             }
 
             if (mysqli_query($conn, $alertsql)) {
-              echo "Alert added successfully.";
-              $URL="http://localhost/dashboard/302//CS302/control.php";
-              echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-              echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+              echo "Alert sent successfully.";
+
                             
             } else {
                 echo "Error: " . $updatesql . "<br>" . mysqli_error($conn);
