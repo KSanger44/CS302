@@ -247,7 +247,7 @@
 
               $pID = $_POST['pID'];
               $status = $_POST['status'];
-              $procID = $_POST['procID'];
+              $procID = $_POST['procs.procID'];
               $date = date("h:i:sa");
               
 
