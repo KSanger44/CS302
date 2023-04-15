@@ -136,7 +136,7 @@
                       <td>" . $adminrow['date'] . "</td>
                       <td>" . $adminrow['time'] . "</td>
 
-                      <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>"
+                      <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>";
 
                       switch ($stat) {
                         case 'p':
