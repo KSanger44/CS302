@@ -283,7 +283,7 @@
 
                             
             } else {
-                echo "Error: " . $updatesql . "<br>" . mysqli_error($conn);
+                echo "Error: " . $alertsql . "<br>" . mysqli_error($conn);
             }
             }
 
