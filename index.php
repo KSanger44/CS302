@@ -99,9 +99,8 @@
         <?php
                 $asql = "SELECT 'dt', 'message' FROM alert WHERE procID = '$procID'";
                 $aresult = mysqli_query($conn,$asql);
-                $arow = mysqli_fetch_array($aresult,MYSQLI_ASSOC);
-
                 $table = $conn->query($asql);
+
                 echo "There are " . $table->num_rows . " Alerts.";
                 if ($table->num_rows > 0) {
                   //output each result row
