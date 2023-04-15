@@ -126,7 +126,7 @@
               //output each result row
               while($adminrow = $adminresult->fetch_assoc()){
                 $stat = $adminrow['status'];
-
+                $time = $adminrow['time'];
 
                 echo "<form action='' method='post'>
                       <tr>
@@ -134,7 +134,7 @@
                       <td>" . $adminrow['dname'] . "</td>
                       <td>" . $adminrow['procedure'] . "</td>
                       <td>" . $adminrow['date'] . "</td>
-                      <td>" . $adminrow['time'] . "</td>
+                      <td>" . date('h:i:s a m/d/Y', strtotime($time)) . "</td>
 
                       <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>";
 
