@@ -44,3 +44,17 @@
 </body>
 
 </html>
+
+
+
+                    <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='prep" . $adminrow['pID'] . "'>
+                    <label class='btn btn-outline-danger' value='p' for='prep" . $adminrow['pID'] . "'>Prep</label>
+
+                    <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='surg" . $adminrow['pID'] . "'>
+                    <label class='btn btn-outline-warning' value='s' for='surg" . $adminrow['pID'] . "'>Surg</label>
+
+                    <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='recov" . $adminrow['pID'] . "'>
+                    <label class='btn btn-outline-primary' value='r' for='recov" . $adminrow['pID'] . "'>Recov</label>
+
+                    <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='clear" . $adminrow['pID'] . "'>
+                    <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'>Clear</label>
