@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
 
     <script>
       function sortTable(n) {
@@ -105,11 +106,11 @@
               die("Connection failed: " . $conn->connect_error);
             }   
             
-            $date = date("h:i:sa");
-            echo "<br> date is " . $date . ".<br>";
+            //$date = date("h:i:sa");
+            //echo "<br> date is " . $date . ".<br>";
 
-            $date2 = getdate();
-            echo "<br> getDate() " . $date2 . ".<br>";
+            //$date2 = getdate();
+            //echo "<br> getDate() " . $date2 . ".<br>";
 
             $adminsql ="SELECT patient.pID, patient.fname, patient.lname,
                         procs.procID, procs.procedure, procs.date, procs.time, procs.status,
@@ -249,7 +250,10 @@
               }                
             }
             
-
+            date_default_timezone_set('America/Chicago'); // CDT
+            $timestamp = time();
+            $date_time = date("d-m-Y (D) H:i:s", $timestamp);
+            $current_date = date('d/m/Y == H:i:s');
             
             if(isset($_POST['confirm'] )){
 
@@ -272,7 +276,7 @@
 
 
               $alertsql = "INSERT INTO `alert` (`aID`, `type`, `procID`, `seen`, `dt`, `message`)
-                                        VALUES (NULL, 'd', '$procID', '0', '$date', '$alert')";             
+                                        VALUES (NULL, 'd', '$procID', '0', '$date_time', '$alert')";             
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Status Updated successfully.";
