@@ -166,7 +166,7 @@
 
               $pID = $_POST['pID'];
               $status = $_POST['status'];
-              
+              echo "<br>"
               echo "pID is " . $pID . ".";
               echo "status is " . $status . ".";
 
