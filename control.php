@@ -106,8 +106,8 @@
               die("Connection failed: " . $conn->connect_error);
             }   
             
-            //$date = date("h:i:sa");
-            //echo "<br> date is " . $date . ".<br>";
+            $date = date("h:i:sa");
+            echo "<br> date is " . $date . ".<br>";
 
             //$date2 = getdate();
             //echo "<br> getDate() " . $date2 . ".<br>";
