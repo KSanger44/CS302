@@ -49,12 +49,6 @@
               die("Connection failed: " . $conn->connect_error);
             }   
             
-            $date = date("h:i:sa");
-            echo "<br> date is " . $date . ".<br>";
-
-            //$date2 = getdate();
-            //echo "<br> getDate() " . $date2 . ".<br>";
-
             $adminsql ="SELECT patient.pID, patient.fname, patient.lname,
                         procs.procID, procs.procedure, procs.date, procs.time, procs.status,
                         doctor.dname
@@ -65,8 +59,6 @@
                         ON procs.dID = doctor.dID";
 
             $adminresult = mysqli_query($conn,$adminsql);
-            //$adminrow = mysqli_fetch_array($adminresult,MYSQLI_ASSOC);
-
 
             //display the sql result set in an html table
             $table = $conn->query($adminsql);
@@ -193,7 +185,7 @@
               }                
             }
             
-            date_default_timezone_set('America/Chicago'); // CDT
+            date_default_timezone_set('America/Chicago');
             $timestamp = time();
             $date_time = date("d-m-Y (D) H:i:s", $timestamp);
             $current_date = date('d/m/Y == H:i:s');
