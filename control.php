@@ -268,7 +268,7 @@
 
 
               $alertsql = "INSERT INTO `alert` (`aID`, `type`, `procID`, `seen`, `dt`, `message`)
-                                        VALUES (NULL, 'd', '$procID', '0', '$date', '$alert')";             
+                                        VALUES (NULL, 'd', '$procID', '0', GETDATE(), '$alert')";             
 
             if (mysqli_query($conn, $updatesql)) {
               echo "Status Updated successfully.";
