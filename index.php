@@ -109,7 +109,7 @@
                     echo "<tr>
                             <td>" . $arow['datetime'] . "</td>
                             <td colspan='3'>" . $arow['text'] . "</td>
-                            </tr>"
+                            </tr>";
                   }
                 }
 
