@@ -248,7 +248,7 @@
               $pID = $_POST['pID'];
               $status = $_POST['status'];
               $procID = $_POST['procID'];
-              $date = date();
+              $date = date("h:i:sa");
               
 
               echo "<br> pID is " . $pID . ".<br>";
