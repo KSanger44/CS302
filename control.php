@@ -136,24 +136,24 @@
 
                       <td class='fit'><div class='btn-group-vertical' role='group' aria-label='Basic radio toggle button group'>
 
-                      <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='prep" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-danger' value='p' for='prep" . $adminrow['pID'] . "'>Prep</label>
+                      <input type='radio' class='btn-check' name='status' id='prep'>
+                      <label class='btn btn-outline-danger' value='p' for='prep'>Prep</label>
 
-                      <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='surg" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-warning' value='s' for='surg" . $adminrow['pID'] . "'>Surg</label>
+                      <input type='radio' class='btn-check' name='status' id='surg'>
+                      <label class='btn btn-outline-warning' value='s' for='surg'>Surg</label>
 
-                      <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='recov" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-primary' value='r' for='recov" . $adminrow['pID'] . "'>Recov</label>
+                      <input type='radio' class='btn-check' name='status' id='recov'>
+                      <label class='btn btn-outline-primary' value='r' for='recov'>Recov</label>
 
-                      <input type='radio' class='btn-check' name='status" . $adminrow['pID'] . "' id='clear" . $adminrow['pID'] . "'>
-                      <label class='btn btn-outline-success' value='c' for='clear" . $adminrow['pID'] . "'>Clear</label>
+                      <input type='radio' class='btn-check' name='statu' id='clear>
+                      <label class='btn btn-outline-success' value='c' for=''>Clear</label>
                       </div>
                       
                       <td><textarea id='alert' name='alert' rows='6' cols='50'></textarea></td>
 
                       <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
 
-                      <td><input type='submit' id='confirm" . $adminrow['pID'] . "' name='confirm" . $adminrow['pID'] . " value='Submit'>
+                      <td><input type='submit' id='confirm' name='confirm' value='Submit'>
                       </tr>
                       </form>";
                                               
@@ -165,10 +165,10 @@
             if(isset($_POST['confirm'] )){
 
               $pID = $_POST['pID'];
-              $status = ($_POST['status' . $pID]);
+              $status = ($_POST['status']);
               
-               echo "pID is " . $pID . ".";
-              //echo "status is " . $status . ".";
+              echo "pID is " . $pID . ".";
+              echo "status is " . $status . ".";
 
               $updatesql = "UPDATE PROCS
                             SET procs.status = $status 
