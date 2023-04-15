@@ -168,6 +168,7 @@
               $status = $_POST['status'];
               echo "<br>";
               echo "pID is " . $pID . ".";
+              echo "<br>";
               echo "status is " . $status . ".";
 
               $updatesql = "UPDATE PROCS
