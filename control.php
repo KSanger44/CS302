@@ -158,6 +158,7 @@
 
                             <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
                             <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
+                            <input type='hidden' name='procID' value=" . $adminrow['procID'] . ">
 
                             <td><input type='submit' id='confirm' name='confirm' value='Submit'>
                             </tr>
@@ -182,6 +183,7 @@
 
                             <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
                             <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
+                            <input type='hidden' name='procID' value=" . $adminrow['procID'] . ">
 
                             <td><input type='submit' id='confirm' name='confirm' value='Submit'>
                             </tr>
@@ -206,6 +208,7 @@
 
                             <input type='hidden' name='pID' value=" . $adminrow['pID'] . ">
                             <input type='hidden' name='stat' value=" . $adminrow['status'] . ">
+                            <input type='hidden' name='procID' value=" . $adminrow['procID'] . ">
 
                             <td><input type='submit' id='confirm' name='confirm' value='Submit'>
                             </tr>
