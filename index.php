@@ -101,10 +101,11 @@
                 $aresult = mysqli_query($conn,$asql);
                 $table = $conn->query($asql);
 
-                $arow = mysqli_fetch_array($aresult,MYSQLI_ASSOC);
 
                 echo "There are " . $table->num_rows . " Alert(s).";
                 if ($table->num_rows > 0) {
+                    
+                $arow = mysqli_fetch_array($aresult,MYSQLI_ASSOC);
                   //output each result row
                   while($arow = $aresult->fetch_assoc()){
                     echo "
