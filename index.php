@@ -68,7 +68,7 @@
             }
             echo"<div class='container'>";
             echo $desc; 
-            echo "<br></div>";
+            echo "</div>";
             ?>
 
         </div>
@@ -87,6 +87,37 @@
         <a href="contacts.php" role="button" class="btn btn-lg btn-primary w-100">Contacts</a>
         <a href="logout.php" role="button" class="btn btn-lg btn-light w-100">Logout</a>
     </div>
+
+    <div class='container' id='alertdiv'>
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th colspan="4">Alerts</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+                $asql = "SELECT 'datetime', 'text' FROM alert WHERE procID = '$procID'"
+                $aresult = mysqli_query($conn,$asql);
+                $arow = mysqli_fetch_array($aresult,MYSQLI_ASSOC);
+
+                $table = $conn->query($asql);
+                echo "There are " . $table->num_rows . " Alerts.";
+                if ($table->num_rows > 0) {
+                  //output each result row
+                  while($arow = $aresult->fetch_assoc()){
+                    echo "<tr>
+                            <td>" . $arow['datetime'] . "</td>
+                            <td colspan='3'>" . $arow['text'] . "</td>
+                            </tr>"
+                  }
+                }
+
+        ?>
+    </tbody>
+    </table>    
+    </div>
+
 </body>
 
 </html>
