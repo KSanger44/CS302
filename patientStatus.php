@@ -72,8 +72,8 @@
             <div class='btn-group-vertical d-flex w-100' role='group' aria-label='Basic example'>
             <button type='button' id='prep' class='btn btn-lg w-66 btn-danger opacity-25'>Preparing for Surgery</button>
             <button type='button' id='surgery' class='btn btn-lg w-66 btn-warning opacity-25'>In Surgery</button>
-            <button type='button' id='recovery' class='btn btn-lg w-66 btn-primary'>Recovering</button>
-            <button type='button' id='checkout' class='btn btn-lg w-66 btn-success opacity-25'>Ready to checkout</button>
+            <button type='button' id='recovery' class='btn btn-lg w-66 btn-primary opacity-25'>Recovering</button>
+            <button type='button' id='checkout' class='btn btn-lg w-66 btn-success'>Ready to checkout</button>
             </div>
             </div>
             <div class='container text-center w-60'><br>
