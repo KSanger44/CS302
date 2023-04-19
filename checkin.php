@@ -30,6 +30,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="surgical.css">
     <script>
       window.addEventListener("load", function() {
         let checkin = document.forms.checkin;
@@ -55,7 +56,11 @@
             event.preventDefault();
             errLog.style.display = "initial";   
             errLog.innerHTML = "Please enter a valid height";  
-          };
+          }else if (checkin.weight.value ==="") {
+            event.preventDefault();
+            errLog.style.display = "initial";   
+            errLog.innerHTML = "Please enter a valid weight";  
+          };;
         });
       });
       </script>
@@ -113,7 +118,7 @@
       echo "<div class='container w-60'>";
       echo "<button type='submit' class='btn btn-lg btn-secondary' name ='checkin'>Submit</button></div></form><br>";
 
-      echo "<span id='errLog'>";
+      echo "<span id='errLog'></span>";
       
     }
 
@@ -149,8 +154,6 @@
             <a href="logout.php" role="button" class="btn btn-lg btn-light w-100">Logout</a>
     </div>
 
-    <span class='container w-60'>
-    
 </body>
 
 </html>
